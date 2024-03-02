@@ -18,7 +18,7 @@ def create_mean_hour_total_df(df):
     mean_hour_total_df = df[df['season_label'] == 'musim_dingin'].groupby('hour')['total_count_hour'].mean().reset_index().sort_values("hour",ascending=False)
     return mean_hour_total_df
 
-all_df = pd.read_csv("df_bike_cln.csv")
+all_df = pd.read_csv("data/df_bike_cln.csv")
 
 with st.sidebar:
     # Menambahkan logo perusahaan
